@@ -7,18 +7,17 @@
 </template>
 
 <script>
-import EmtyLayout from '@/layouts/EmptyLayout'
+import EmptyLayout from '@/layouts/EmptyLayout'
 import MainLayout from '@/layouts/MainLayout'
+
 export default {
   computed: {
-    layout() {
-      console.log(this.$route.meta.layout);
-      return 'empty-layout';
-      //return (this.$route.meta.layout || 'empty') + '-layout';
+    layout () {
+      return (this.$route.meta.layout || 'empty') + '-layout'
     }
   },
   components: {
-    EmtyLayout, MainLayout
+    EmptyLayout, MainLayout
   }
 }
 </script>
